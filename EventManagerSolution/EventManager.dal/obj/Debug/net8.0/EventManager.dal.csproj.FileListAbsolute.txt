@@ -1,0 +1,15 @@
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\bin\Debug\net8.0\EventManager.dal.deps.json
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\bin\Debug\net8.0\EventManager.dal.runtimeconfig.json
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\bin\Debug\net8.0\EventManager.dal.dll
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\bin\Debug\net8.0\EventManager.dal.pdb
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\EventManager.dal.csproj.AssemblyReference.cache
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\EventManager.dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\EventManager.dal.AssemblyInfoInputs.cache
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\EventManager.dal.AssemblyInfo.cs
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\EventManager.dal.csproj.CoreCompileInputs.cache
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\EventManager.dal.sourcelink.json
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\EventManager.dal.dll
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\refint\EventManager.dal.dll
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\EventManager.dal.pdb
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\EventManager.dal.genruntimeconfig.cache
+C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager.DAL\obj\Debug\net8.0\ref\EventManager.dal.dll
