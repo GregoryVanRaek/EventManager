@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManager", "EventManager\EventManager.csproj", "{7D23DD3C-5908-4C16-A287-9E463E419E5F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManager.bll", "EventManager.bll\EventManager.bll.csproj", "{D1771D14-7AC3-4BB8-BB2B-5A240ECDAB04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventManager.dal", "EventManager.dal\EventManager.dal.csproj", "{4334733A-CAA9-490A-8588-C483A3B678FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{7D23DD3C-5908-4C16-A287-9E463E419E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D23DD3C-5908-4C16-A287-9E463E419E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D23DD3C-5908-4C16-A287-9E463E419E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1771D14-7AC3-4BB8-BB2B-5A240ECDAB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1771D14-7AC3-4BB8-BB2B-5A240ECDAB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1771D14-7AC3-4BB8-BB2B-5A240ECDAB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1771D14-7AC3-4BB8-BB2B-5A240ECDAB04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4334733A-CAA9-490A-8588-C483A3B678FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4334733A-CAA9-490A-8588-C483A3B678FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4334733A-CAA9-490A-8588-C483A3B678FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4334733A-CAA9-490A-8588-C483A3B678FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
