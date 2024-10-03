@@ -16,6 +16,8 @@ builder.Services.AddDbContext<DbContext_EventManager>(
 
 builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<IEventService, EventService>();
+builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+builder.Services.AddScoped<IAddressService, AddressService>();
 
 var app = builder.Build();
 

@@ -1,9 +1,5 @@
 ﻿@model IEnumerable<EventManager.Models.EventViewModel>
 
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 
 <html>
@@ -19,7 +15,8 @@
             <h2>@item.Name</h2>
             <p>Start on : @item.StartDate.ToString("D")</p>
             <p>End on : @item.EndDate.ToString("D")</p>
-            <a asp-action="Detail" asp-route-id=@item.Id>Details</a>
+            <a class="btn btn-info" asp-action="Detail" asp-route-id=@item.Id>Details</a>
+            <a class="btn btn-danger" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
         }
     </div>
 </body>

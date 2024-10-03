@@ -43,6 +43,31 @@ public class EventController : Controller
     {
         return View();
     }
+
+    [HttpPost]
+    public IActionResult Create([FromForm] EventFormModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            _eventService.Create(model.toEntity());
+            return RedirectToAction(nameof(AllEvent));
+        }
+
+        return View(model);
+    }
+
+    public IActionResult Delete(int id)
+    {
+        Event eventToDelete = _eventService.GetOneById(id);
+
+        if (eventToDelete != null)
+        {
+            _eventService.Delete(eventToDelete);
+            return RedirectToAction(nameof(AllEvent));
+        }
+        
+        throw new EventNotFoundException();
+    }
     
     public IActionResult Error()
     {

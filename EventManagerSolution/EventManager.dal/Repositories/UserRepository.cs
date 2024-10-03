@@ -28,7 +28,7 @@ public class UserRepository(DbContext_EventManager context) : IUserRepository
         throw new NotImplementedException();
     }
 
-    public void Delete(User entity)
+    public bool Delete(User entity)
     {
         throw new NotImplementedException();
     }

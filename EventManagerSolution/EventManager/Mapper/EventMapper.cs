@@ -16,4 +16,19 @@ public static class EventMapper
             State = entity.State
         };
     }
+
+    public static Event toEntity(this EventFormModel model)
+    {
+        return new Event
+        {
+            Id = model.Id,
+            Name = model.Name,
+            StartDate = model.StartDate,
+            EndDate = model.EndDate,
+            State = model.State,
+            Address = model.Address.toEntity(),
+            Days = new List<Days>()
+        };
+    }
+    
 }

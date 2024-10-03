@@ -1,8 +1,59 @@
-﻿@model dynamic
+﻿@model EventFormModel
 
 @{
     ViewBag.Title = "title";
-    Layout = "_Layout";
 }
 
 <h2>Add a new Event</h2>
+
+<form method="POST">
+    <div class="form-group">
+        <label for="input-name">Name</label>
+        <input type="text" class="form-control" id="input-name" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="input-start-date">Start date</label>
+        <input type="date" class="form-control" id="input-start-date" name="start-date">
+    </div>
+
+    <div class="form-group">
+        <label for="input-end-date">End date</label>
+        <input type="date" class="form-control" id="input-end-date" name="end-date">
+    </div>
+    
+    <div class="form-group">
+        <h3>Address</h3>
+        <div class="form-group">
+            <label for="input-street">Street</label>
+            <input type="text" class="form-control" id="input-street" name="Address.Street">
+        </div>
+
+        <div class="form-group">
+            <label for="input-number">N°</label>
+            <input type="number" class="form-control" id="input-number" name="Address.Number">
+        </div>
+
+        <div class="form-group">
+            <label for="input-zip-code">Zip Code</label>
+            <input type="text" class="form-control" id="input-zip-code" name="Address.Zip">
+        </div>
+
+        <div class="form-group">
+            <label for="input-city">City</label>
+            <input type="text" class="form-control" id="input-city" name="Address.City">
+        </div>
+
+        <div class="form-group">
+            <label for="input-country">Country</label>
+            <input type="text" class="form-control" id="input-country" name="Address.Country">
+        </div>
+
+        <div class="form-group">
+            <label for="input-continent">Continent</label>
+            <input type="text" class="form-control" id="input-continent" name="Address.Continent">
+        </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

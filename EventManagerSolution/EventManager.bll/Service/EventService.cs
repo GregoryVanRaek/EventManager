@@ -47,16 +47,22 @@ public class EventService(IEventRepository repo) : IEventService
         throw new NotImplementedException();
     }
 
-    public void Delete(Event entity)
+    public bool Delete(Event entity)
     {
-        throw new NotImplementedException();
+        if (CheckIfEventExist(entity))
+            return _repository.Delete(entity);
+        
+        throw new EventNotFoundException();
     }
     
     // Fonctions internes
     private bool CheckIfEventExist(Event entity)
     {
         Event? e = _repository.GetOneByName(entity.Name);
+        
+        if(e != null)
+            return e.StartDate == entity.StartDate;
 
-        return e.StartDate == entity.StartDate;
+        return false;
     }
 }

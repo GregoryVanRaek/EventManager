@@ -25,7 +25,10 @@ public class EventRepository(DbContext_EventManager context) : IEventRepository
 
     public Event Create(Event entity)
     {
-        return _context.Event.Add(entity).Entity;
+        var insert = _context.Event.Add(entity).Entity;
+        _context.SaveChanges();
+        
+        return insert;
     }
 
     public Event Update(Event entity)
@@ -33,8 +36,17 @@ public class EventRepository(DbContext_EventManager context) : IEventRepository
         throw new NotImplementedException();
     }
 
-    public void Delete(Event entity)
+    public bool Delete(Event entity)
     {
-        throw new NotImplementedException();
+        var toDelete = _context.Event.FirstOrDefault(x => x.Id == entity.Id);
+
+        if (toDelete != null)
+        {
+            _context.Event.Remove(toDelete);
+            _context.SaveChanges();
+            return true;
+        }
+
+        return false;
     }
 }

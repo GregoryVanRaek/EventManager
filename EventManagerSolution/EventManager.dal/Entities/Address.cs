@@ -10,8 +10,8 @@ public class Address
     public required string Country { get; set; }
     public required string Continent { get; set; }
     
-    public required int UserId { get; set; }
-    public User User { get; set; }
+    public int? UserId { get; set; }
+    public User? User { get; set; }
     
     public int EventId { get; set; }
     public List<Event> Events { get; set; }
