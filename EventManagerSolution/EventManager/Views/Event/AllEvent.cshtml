@@ -1,0 +1,26 @@
+﻿@model IEnumerable<EventManager.Models.EventViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Event list</title>
+</head>
+<body>
+    <h1>Here is all the futur event</h1>
+
+    <div>
+        @foreach (var item in Model)
+        {
+            <h2>@item.Name</h2>
+            <p>Start on : @item.StartDate.ToString("D")</p>
+            <p>End on : @item.EndDate.ToString("D")</p>
+            <a asp-action="Detail" asp-route-id=@item.Id>Details</a>
+        }
+    </div>
+</body>
+</html>

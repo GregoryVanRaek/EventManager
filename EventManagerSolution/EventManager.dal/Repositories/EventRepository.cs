@@ -15,12 +15,17 @@ public class EventRepository(DbContext_EventManager context) : IEventRepository
 
     public Event? GetOneById(int key)
     {
-        throw new NotImplementedException();
+        return _context.Event.FirstOrDefault(x => x.Id == key);
+    }
+
+    public Event? GetOneByName(string eventName)
+    {
+        return _context.Event.FirstOrDefault(x => x.Name == eventName);
     }
 
     public Event Create(Event entity)
     {
-        throw new NotImplementedException();
+        return _context.Event.Add(entity).Entity;
     }
 
     public Event Update(Event entity)

@@ -1,4 +1,5 @@
-﻿using EventManager.bll.Service.Interfaces;
+﻿using EventManager.bll.Model.Exception;
+using EventManager.bll.Service.Interfaces;
 using EventManager.dal.Entities;
 using EventManager.dal.Repositories.Interfaces;
 
@@ -13,14 +14,32 @@ public class EventService(IEventRepository repo) : IEventService
         return _repository.GetAll();
     }
 
-    public Event GetOneById(int key)
+    public Event GetOneById(int id)
     {
-        throw new NotImplementedException();
+        Event? result = _repository.GetOneById(id);
+        
+        if(result is null)
+            throw new EventNotFoundException();
+
+        return result;
+    }
+    
+    public Event? GetOneByName(string eventName)
+    {
+        Event? result = _repository.GetOneByName(eventName);
+        
+        if(result is null)
+            throw new EventNotFoundException();
+
+        return result;
     }
 
     public Event Create(Event entity)
     {
-        throw new NotImplementedException();
+        if (!CheckIfEventExist(entity))
+            return _repository.Create(entity);
+        
+        throw new EventAlreadyExistException();
     }
 
     public Event Update(Event entity)
@@ -31,5 +50,13 @@ public class EventService(IEventRepository repo) : IEventService
     public void Delete(Event entity)
     {
         throw new NotImplementedException();
+    }
+    
+    // Fonctions internes
+    private bool CheckIfEventExist(Event entity)
+    {
+        Event? e = _repository.GetOneByName(entity.Name);
+
+        return e.StartDate == entity.StartDate;
     }
 }
