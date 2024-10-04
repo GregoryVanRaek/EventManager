@@ -43,8 +43,11 @@ public class EventService(IEventRepository repo) : IEventService
     }
 
     public Event Update(Event entity)
-    {
-        throw new NotImplementedException();
+    { 
+        if (CheckIfEventExist(entity))
+            return _repository.Update(entity);
+        
+        throw new EventNotFoundException();
     }
 
     public bool Delete(Event entity)

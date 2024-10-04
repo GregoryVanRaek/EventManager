@@ -14,4 +14,6 @@ public class EventViewModel
     
     public EventStatus State { get; set; }
     
+    public Address Address { get; set; }
+    
 }

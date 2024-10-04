@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<DbContext_EventManager>(
-    b => b.UseSqlServer(builder.Configuration.GetConnectionString("Default"))
+    b => b.UseSqlServer(builder.Configuration.GetConnectionString("Home"))
 );
 
 builder.Services.AddScoped<IEventRepository, EventRepository>();

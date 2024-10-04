@@ -58,15 +58,51 @@ public class EventController : Controller
 
     public IActionResult Delete(int id)
     {
-        Event eventToDelete = _eventService.GetOneById(id);
-
-        if (eventToDelete != null)
+        try
         {
+            Event eventToDelete = _eventService.GetOneById(id);
             _eventService.Delete(eventToDelete);
             return RedirectToAction(nameof(AllEvent));
         }
+        catch (Exception e)
+        {
+            TempData["ErrorMessage"] = "Event not found";
+            return RedirectToAction(nameof(Error));
+        }
+    }
+
+    public IActionResult Update(int id)
+    {
+        try
+        {
+            var item = _eventService.GetOneById(id).toFormModel();
         
-        throw new EventNotFoundException();
+            return View(item);
+        }
+        catch (Exception e)
+        {
+            TempData["ErrorMessage"] = "Event not found";
+            return RedirectToAction(nameof(Error));
+        }
+    }
+    
+    [HttpPost]
+    public IActionResult Update([FromForm] EventFormModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                _eventService.Update(model.toEntity());
+                return RedirectToAction(nameof(AllEvent));
+            }
+            catch (EventNotFoundException)
+            {
+                TempData["ErrorMessage"] = "Event not found";
+                return RedirectToAction(nameof(Error));
+            }
+        }
+        return View(model);
     }
     
     public IActionResult Error()

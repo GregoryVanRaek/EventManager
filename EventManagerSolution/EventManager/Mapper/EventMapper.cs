@@ -13,7 +13,22 @@ public static class EventMapper
             Name = entity.Name,
             StartDate = entity.StartDate,
             EndDate = entity.EndDate,
-            State = entity.State
+            State = entity.State,
+            Address = entity.Address
+        };
+    }
+    
+    public static EventFormModel toFormModel(this Event entity)
+    {
+        return new EventFormModel
+        {
+            Id = entity.Id,
+            Name = entity.Name,
+            StartDate = entity.StartDate,
+            EndDate = entity.EndDate,
+            State = entity.State,
+            Address = entity.Address != null ? entity.Address.toFormModel() : null,
+            Days = entity.Days
         };
     }
 

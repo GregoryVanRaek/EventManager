@@ -29,4 +29,6 @@ public class AddressFormModel
     [Required]
     [MaxLength(20)]
     public required string Continent { get; set; }
+    
+    public int? UserId { get; set; }
 }

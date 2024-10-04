@@ -19,4 +19,21 @@ public static class AddressMapper
             UserId = null
         };
     }
+    public static AddressFormModel? toFormModel(this Address? entity)
+    {
+        if (entity == null) 
+            return null;
+        
+        return new AddressFormModel
+        {
+            Id = entity.Id,
+            Street = entity.Street,
+            Number = entity.Number,
+            Zip = entity.Zip,
+            City = entity.City,
+            Country = entity.Country,
+            Continent = entity.Continent,
+            UserId = entity.UserId
+        };
+    }
 }
