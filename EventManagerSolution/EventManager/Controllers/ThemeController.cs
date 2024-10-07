@@ -7,66 +7,60 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EventManager.Controllers;
 
-public class EventController : Controller
+public class ThemeController(IThemeService themeService) : Controller
 {
-    private readonly IEventService _eventService;
-    
-    public EventController(IEventService eventService)
-    {
-        _eventService = eventService;
-    }
-    
-    public IActionResult AllEvent()
-    {
-        var events = _eventService.GetAll()
-            .Select(e => e.toViewModel())
-            .ToList();
-        
-        return View(events);
-    }
+    private readonly IThemeService _themeService = themeService;
 
+    public IActionResult AllTheme()
+    {
+        var theme = _themeService.GetAll()
+                                                     .Select(t => t.toViewModel())
+                                                     .ToList();
+        return View(theme);
+    }
+    
     public IActionResult Detail(int id)
     {
         try
         {
-            var result = _eventService.GetOneById(id).toViewModel();
+            var result = _themeService.GetOneById(id).toViewModel();
             return View(result);
         }
         catch (NotFoundException ex)
         {
-            TempData["ErrorMessage"] = "Event not found";
+            TempData["ErrorMessage"] = "Theme not found";
             return RedirectToAction(nameof(Error));
         }
     }
-
+    
     public IActionResult Create()
     {
         return View();
     }
 
     [HttpPost]
-    public IActionResult Create([FromForm] EventFormModel model)
+    public IActionResult Create([FromForm] ThemeFormModel model)
     {
         if (ModelState.IsValid)
         {
-            _eventService.Create(model.toEntity());
-            return RedirectToAction(nameof(AllEvent));
+            _themeService.Create(model.toEntity());
+            return RedirectToAction(nameof(AllTheme));
         }
 
         return View(model);
     }
-
+    
     public IActionResult Delete(int id)
     {
         try
         {
-            Event eventToDelete = _eventService.GetOneById(id);
-            _eventService.Delete(eventToDelete);
-            return RedirectToAction(nameof(AllEvent));
+            Theme themeToDelete = _themeService.GetOneById(id);
+            _themeService.Delete(themeToDelete);
+            return RedirectToAction(nameof(AllTheme));
         }
         catch (Exception e)
         {
-            TempData["ErrorMessage"] = "Event not found";
+            TempData["ErrorMessage"] = "Theme not found";
             return RedirectToAction(nameof(Error));
         }
     }
@@ -75,7 +69,7 @@ public class EventController : Controller
     {
         try
         {
-            var item = _eventService.GetOneById(id).toFormModel();
+            var item = _themeService.GetOneById(id).toFormModel();
         
             return View(item);
         }
@@ -87,17 +81,17 @@ public class EventController : Controller
     }
     
     [HttpPost]
-    public IActionResult Update(int id, [FromForm] EventFormModel model)
+    public IActionResult Update(int id, [FromForm] ThemeFormModel model)
     {
         if (ModelState.IsValid)
         {
             try
             {
-                var existingEvent = _eventService.GetOneById(id);
-                model.Id = existingEvent.Id;
+                var existingTheme = _themeService.GetOneById(id);
+                model.Id = existingTheme.Id;
                 
-                _eventService.Update(model.toEntity());
-                return RedirectToAction(nameof(AllEvent));
+                _themeService.Update(model.toEntity());
+                return RedirectToAction(nameof(AllTheme));
             }
             catch (NotFoundException)
             {
@@ -107,6 +101,7 @@ public class EventController : Controller
         }
         return View(model);
     }
+    
     
     public IActionResult Error()
     {

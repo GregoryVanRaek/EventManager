@@ -54,6 +54,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Theme/AllTheme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlbWVcQWxsVGhlbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Theme/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlbWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Theme/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlbWVcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

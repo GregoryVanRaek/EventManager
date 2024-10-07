@@ -1,0 +1,17 @@
+﻿@model System.Collections.Generic.List<EventManager.Models.ThemeViewModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>All the theme</h2>
+<span><a class="btn btn-primary" asp-action="Create">New</a></span>
+
+@foreach (var t in Model)
+{
+    <p>@t.Name</p>
+    
+    <a class="btn btn-warning" asp-action="Update" asp-route-id=@t.Id>Update</a>
+    <a class="btn btn-danger" asp-action="Delete" asp-route-id=@t.Id>Delete</a>
+}

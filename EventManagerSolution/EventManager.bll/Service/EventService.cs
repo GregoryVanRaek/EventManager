@@ -19,7 +19,7 @@ public class EventService(IEventRepository repo) : IEventService
         Event? result = _repository.GetOneById(id);
         
         if(result is null)
-            throw new EventNotFoundException();
+            throw new NotFoundException("event");
 
         return result;
     }
@@ -29,7 +29,7 @@ public class EventService(IEventRepository repo) : IEventService
         Event? result = _repository.GetOneByName(eventName);
         
         if(result is null)
-            throw new EventNotFoundException();
+            throw new NotFoundException("event");
 
         return result;
     }
@@ -39,7 +39,7 @@ public class EventService(IEventRepository repo) : IEventService
         if (!CheckIfEventExist(entity))
             return _repository.Create(entity);
         
-        throw new EventAlreadyExistException();
+        throw new DuplicateException("event");
     }
 
     public Event Update(Event entity)
@@ -47,7 +47,7 @@ public class EventService(IEventRepository repo) : IEventService
         if (CheckIfEventExist(entity))
             return _repository.Update(entity);
         
-        throw new EventNotFoundException();
+        throw new NotFoundException("event");
     }
 
     public bool Delete(Event entity)
@@ -55,7 +55,7 @@ public class EventService(IEventRepository repo) : IEventService
         if (CheckIfEventExist(entity))
             return _repository.Delete(entity);
         
-        throw new EventNotFoundException();
+        throw new NotFoundException("event");
     }
     
     // Fonctions internes

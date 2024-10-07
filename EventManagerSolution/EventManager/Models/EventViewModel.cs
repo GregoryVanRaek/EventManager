@@ -24,4 +24,6 @@ public class EventViewModel
     
     public string Address_Country { get; set; }
     
+    public List<Days> Days { get; set; }
+    
 }

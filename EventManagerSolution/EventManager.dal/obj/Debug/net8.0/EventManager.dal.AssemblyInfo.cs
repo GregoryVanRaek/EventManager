@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EventManager.dal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf411b420863381fd346ef48e65958bad8ba8a2f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4dfcec89e270bf6c5086f255e622cc93077f568d")]
 [assembly: System.Reflection.AssemblyProductAttribute("EventManager.dal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EventManager.dal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

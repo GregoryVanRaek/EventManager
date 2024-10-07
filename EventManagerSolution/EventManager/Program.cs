@@ -17,6 +17,9 @@ builder.Services.AddDbContext<DbContext_EventManager>(
 builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<IEventService, EventService>();
 
+builder.Services.AddScoped<IThemeRepository, ThemeRepository>();
+builder.Services.AddScoped<IThemeService, ThemeService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
