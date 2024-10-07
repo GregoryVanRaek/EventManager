@@ -12,12 +12,15 @@ public class DaysRepository(DbContext_EventManager context) : IDaysRepository
     public List<Days> GetAll()
     {
         return _context.Days.Include(days => days.Event)
+                            .Include(days => days.Theme)                
                             .ToList();
     }
 
     public Days? GetOneById(int id)
     {
-        return _context.Days.FirstOrDefault(d => d.Id == id);
+        return _context.Days.Include(days => days.Event)
+                            .Include(days => days.Theme)
+                            .FirstOrDefault(d => d.Id == id);
     }
 
     public Days Create(Days entity)

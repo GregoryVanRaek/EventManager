@@ -11,17 +11,20 @@ public class EventRepository(DbContext_EventManager context) : IEventRepository
     
     public List<Event> GetAll()
     {
-        return _context.Event.ToList();
+        return _context.Event.Include(e => e.Days)
+                             .ToList();
     }
 
     public Event? GetOneById(int key)
     {
-        return _context.Event.FirstOrDefault(x => x.Id == key);
+        return _context.Event.Include(e => e.Days)
+                             .FirstOrDefault(x => x.Id == key);
     }
 
     public Event? GetOneByName(string eventName)
     {
-        return _context.Event.FirstOrDefault(x => x.Name.Contains(eventName));
+        return _context.Event.Include(e => e.Days)
+                             .FirstOrDefault(x => x.Name.Contains(eventName));
     }
 
     public Event Create(Event entity)

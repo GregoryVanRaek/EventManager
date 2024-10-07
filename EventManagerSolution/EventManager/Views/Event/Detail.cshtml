@@ -14,12 +14,21 @@
 <p>@Model.EndDate</p>
 <p>@Model.Address_City</p>
 
-@foreach (var d in Model.Days)
+<h2>Event Days:</h2>
+<a class="btn btn-info" asp-action="DayCreate" asp-route-eventId=@Model.Id>Add</a>
+
+@if (Model.Days.Any())
+{
+    @foreach (var d in Model.Days)
     {
-        <p>@d.Name</p>
-        <p>Day's theme : @d.Theme</p>
-        <p>Date : @d.StartDate</p>
+        <h3>Day: @d.Name</h3>
+        <p>Day's theme: @d.Theme</p>
+        <p>Date: @d.StartDate</p>
     }
+}
+else
+{
+    <p>No days available for this event.</p>
 }
 
 <div>

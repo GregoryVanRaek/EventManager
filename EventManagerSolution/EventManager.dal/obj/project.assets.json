@@ -4721,19 +4721,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\studentdot0414\\.nuget\\packages\\": {}
+    "C:\\Users\\vanra\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj",
+      "projectUniqueName": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj",
       "projectName": "EventManager.dal",
-      "projectPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj",
-      "packagesPath": "C:\\Users\\studentdot0414\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\obj\\",
+      "projectPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj",
+      "packagesPath": "C:\\Users\\vanra\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\studentdot0414\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vanra\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

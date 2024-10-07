@@ -19,6 +19,7 @@ public static class EventMapper
             Address_Zip = entity.Address_Zip,
             Address_City = entity.Address_City,
             Address_Country = entity.Address_Country,
+            Days = entity.Days
         };
     }
     
