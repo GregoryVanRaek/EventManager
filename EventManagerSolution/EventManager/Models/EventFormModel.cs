@@ -5,26 +5,27 @@ namespace EventManager.Models;
 
 public class EventFormModel
 {
-    [Required]
-    public int Id { get; set; }
+    public int? Id { get; set; }
     
-    [Required]
     [MinLength(4)]
     [MaxLength(100)]
     public required string Name { get; set; }
     
-    [Required]
-    [DataType(DataType.DateTime)]
     public required DateTime StartDate { get; set; }
     
-    [Required]
-    [DataType(DataType.DateTime)]
     public required DateTime EndDate { get; set; }
 
     public required EventStatus State { get; set; } = EventStatus.Pending;
     
-    [Required]
-    public required AddressFormModel Address { get; set; }
+    public string Address_Street { get; set; }
+    
+    public string Address_Number { get; set; }
+    
+    public string Address_Zip { get; set; }
+    
+    public string Address_City { get; set; }
+    
+    public string Address_Country { get; set; }
     
     public List<Days>? Days { get; set; }
 }

@@ -87,12 +87,15 @@ public class EventController : Controller
     }
     
     [HttpPost]
-    public IActionResult Update([FromForm] EventFormModel model)
+    public IActionResult Update(int id, [FromForm] EventFormModel model)
     {
         if (ModelState.IsValid)
         {
             try
             {
+                var existingEvent = _eventService.GetOneById(id);
+                model.Id = existingEvent.Id;
+                
                 _eventService.Update(model.toEntity());
                 return RedirectToAction(nameof(AllEvent));
             }

@@ -11,14 +11,12 @@ public class EventRepository(DbContext_EventManager context) : IEventRepository
     
     public List<Event> GetAll()
     {
-        return _context.Event.Include(e => e.Address)
-                             .ToList();
+        return _context.Event.ToList();
     }
 
     public Event? GetOneById(int key)
     {
-        return _context.Event.Include(e => e.Address)
-                             .FirstOrDefault(x => x.Id == key);
+        return _context.Event.FirstOrDefault(x => x.Id == key);
     }
 
     public Event? GetOneByName(string eventName)
@@ -36,22 +34,9 @@ public class EventRepository(DbContext_EventManager context) : IEventRepository
 
     public Event Update(Event entity)
     {
-        var entityToUpdate = _context.Event.Include(e => e.Address)
-                                                 .FirstOrDefault(x => x.Id == entity.Id);
-        /*
-        entityToUpdate.Name = entity.Name;
-        entityToUpdate.StartDate = entity.StartDate;
-        entityToUpdate.EndDate = entity.EndDate;
-        entityToUpdate.Address.Street = entity.Address.Street;
-        entityToUpdate.Address.Number = entity.Address.Number;
-        entityToUpdate.Address.Zip = entity.Address.Zip;
-        entityToUpdate.Address.City = entity.Address.City;
-        entityToUpdate.Address.Country = entity.Address.Country;
-        entityToUpdate.Address.Continent = entity.Address.Continent;
-        */
+        var entityToUpdate = _context.Event.FirstOrDefault(x => x.Id == entity.Id);
         
         _context.Entry(entityToUpdate).CurrentValues.SetValues(entity);
-        _context.Entry(entityToUpdate.Address).CurrentValues.SetValues(entity.Address); // problème id adresse non passé donc résultat null donc formulaire non validé
         
         _context.SaveChanges();
 

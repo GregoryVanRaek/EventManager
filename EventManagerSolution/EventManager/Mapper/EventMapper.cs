@@ -14,7 +14,11 @@ public static class EventMapper
             StartDate = entity.StartDate,
             EndDate = entity.EndDate,
             State = entity.State,
-            Address = entity.Address
+            Address_Street = entity.Address_Street,
+            Address_Number = entity.Address_Number,
+            Address_Zip = entity.Address_Zip,
+            Address_City = entity.Address_City,
+            Address_Country = entity.Address_Country,
         };
     }
     
@@ -27,7 +31,11 @@ public static class EventMapper
             StartDate = entity.StartDate,
             EndDate = entity.EndDate,
             State = entity.State,
-            Address = entity.Address != null ? entity.Address.toFormModel() : null,
+            Address_Street = entity.Address_Street,
+            Address_Number = entity.Address_Number,
+            Address_Zip = entity.Address_Zip,
+            Address_City = entity.Address_City,
+            Address_Country = entity.Address_Country,
             Days = entity.Days
         };
     }
@@ -41,7 +49,11 @@ public static class EventMapper
             StartDate = model.StartDate,
             EndDate = model.EndDate,
             State = model.State,
-            Address = model.Address.toEntity(),
+            Address_Street = model.Address_Street,
+            Address_Number = model.Address_Number,
+            Address_Zip = model.Address_Zip,
+            Address_City = model.Address_City,
+            Address_Country = model.Address_Country,
             Days = new List<Days>()
         };
     }

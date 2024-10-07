@@ -9,7 +9,6 @@ public class DbContext_EventManager : DbContext
     public DbContext_EventManager(DbContextOptions options) : base(options){}
     
     #region Db entity
-        public DbSet<Address> Address { get; set; }
         public DbSet<Comment> Comment { get; set; }
         public DbSet<Days> Days { get; set; }
         public DbSet<Event> Event { get; set; }
@@ -21,7 +20,6 @@ public class DbContext_EventManager : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration(new AddressConfig());
         modelBuilder.ApplyConfiguration(new CommentConfig());
         modelBuilder.ApplyConfiguration(new DaysConfig());
         modelBuilder.ApplyConfiguration(new EventConfig());

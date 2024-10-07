@@ -33,6 +33,21 @@ public class UserConfig : IEntityTypeConfiguration<User>
         
         builder.Property(u => u.PasswordSalt)
                .IsRequired();
+    
+        builder.Property(u => u.Address_Street)
+               .IsRequired();
+        
+        builder.Property(u => u.Address_Number)
+               .IsRequired();
+        
+        builder.Property(u => u.Address_Zip)
+               .IsRequired();
+        
+        builder.Property(u => u.Address_City)
+               .IsRequired();
+        
+        builder.Property(u => u.Address_Country)
+               .IsRequired();
         
         // Constraints
         builder.HasKey(u => u.Id)
@@ -43,11 +58,7 @@ public class UserConfig : IEntityTypeConfiguration<User>
 
         builder.HasMany(u => u.Role)
                .WithMany(r => r.Users);
-
-        builder.HasMany(u => u.Address)
-               .WithOne(a => a.User)
-               .HasForeignKey(a => a.UserId);
-
+        
         builder.HasMany(u => u.Comment)
                .WithOne(c => c.User)
                .HasForeignKey(c => c.UserId);

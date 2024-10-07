@@ -12,103 +12,47 @@
 
 <form method="POST">
     <div class="form-group">
-        <label for="input-id">Id</label>
-        <input type="number" class="form-control" id="input-id" name="id" value=@Model.Id>
-    </div>
-    
-    <div class="form-group">
-        <label for="input-name">Name</label>
-        <input type="text" class="form-control" id="input-name" name="name" value=@Model.Name>
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" type="text" class="form-control">
     </div>
 
     <div class="form-group">
-        <label for="input-start-date">Start date</label>
-        <input type="date" class="form-control" id="input-start-date" name="start-date" value=@Model.StartDate>
+        <label asp-for="StartDate">Start date</label>
+        <input asp-for="StartDate" type="date" class="form-control">
     </div>
 
     <div class="form-group">
-        <label for="input-end-date">End date</label>
-        <input type="date" class="form-control" id="input-end-date" name="end-date" value=@Model.EndDate>
+        <label asp-for="EndDate">End date</label>
+        <input asp-for="EndDate" type="date" class="form-control">
     </div>
 
-    @if (Model.Address != null)
-    {
+    <div class="form-group">
+        <h3>Address</h3>
         <div class="form-group">
-            <h3>Address</h3>
-            <div class="form-group">
-                <label for="input-Address.id">Id</label>
-                <input type="text" class="form-control" id="input-Address.id" name="Address.Address.id" value="@Model.Address.Id"/>
-            </div>
-            <div class="form-group">
-                <label for="input-street">Street</label>
-                <input type="text" class="form-control" id="input-street" name="Address.Street" value="@Model.Address.Street"/>
-            </div>
-
-            <div class="form-group">
-                <label for="input-number">N°</label>
-                <input type="number" class="form-control" id="input-number" name="Address.Number" value="@Model.Address.Number"/>
-            </div>
-
-            <div class="form-group">
-                <label for="input-zip-code">Zip Code</label>
-                <input type="text" class="form-control" id="input-zip-code" name="Address.Zip" value="@Model.Address.Zip"/>
-            </div>
-
-            <div class="form-group">
-                <label for="input-city">City</label>
-                <input type="text" class="form-control" id="input-city" name="Address.City" value="@Model.Address.City"/>
-            </div>
-
-            <div class="form-group">
-                <label for="input-country">Country</label>
-                <input type="text" class="form-control" id="input-country" name="Address.Country" value="@Model.Address.Country"/>
-            </div>
-
-            <div class="form-group">
-                <label for="input-continent">Continent</label>
-                <input type="text" class="form-control" id="input-continent" name="Address.Continent" value="@Model.Address.Continent"/>
-            </div>
+            <label asp-for="Address_Street">Street</label>
+            <input asp-for="Address_Street" type="text" class="form-control">
         </div>
-    }
-    else
-    {
+
         <div class="form-group">
-            <h3>Address</h3>
-            <div class="form-group">
-                <label for="input-id">Id</label>
-                <input type="number" class="form-control" id="input-id" name="Address.Id">
-            </div>
-            <div class="form-group">
-                <label for="input-street">Street</label>
-                <input type="text" class="form-control" id="input-street" name="Address.Street"/>
-            </div>
+            <label asp-for="Address_Number">N°</label>
+            <input asp-for="Address_Number" type="number" class="form-control">
+        </div>
 
-            <div class="form-group">
-                <label for="input-number">N°</label>
-                <input type="number" class="form-control" id="input-number" name="Address.Number"/>
-            </div>
+        <div class="form-group">
+            <label asp-for="Address_Zip">Zip Code</label>
+            <input asp-for="Address_Zip" type="text" class="form-control">
+        </div>
 
-            <div class="form-group">
-                <label for="input-zip-code">Zip Code</label>
-                <input type="text" class="form-control" id="input-zip-code" name="Address.Zip"/>
-            </div>
+        <div class="form-group">
+            <label asp-for="Address_City">City</label>
+            <input asp-for="Address_City" type="text" class="form-control">
+        </div>
 
-            <div class="form-group">
-                <label for="input-city">City</label>
-                <input type="text" class="form-control" id="input-city" name="Address.City"/>
-            </div>
-
-            <div class="form-group">
-                <label for="input-country">Country</label>
-                <input type="text" class="form-control" id="input-country" name="Address.Country"/>
-            </div>
-
-            <div class="form-group">
-                <label for="input-continent">Continent</label>
-                <input type="text" class="form-control" id="input-continent" name="Address.Continent"/>
-            </div>
-        </div> 
-    }
+        <div class="form-group">
+            <label asp-for="Address_Country">Country</label>
+            <input asp-for="Address_Country" type="text" class="form-control">
+        </div>
+    </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>

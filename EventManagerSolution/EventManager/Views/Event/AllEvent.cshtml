@@ -14,15 +14,9 @@
         {
             <h2>@item.Name</h2>
             <p>Start on : @item.StartDate.ToString("D")</p>
-            <p>End on : @item.EndDate.ToString("D")</p>
-            @if (@item.Address != null)
-            {
-                <p>Country : @item.Address.Country</p>
-            }
-            else
-            {
-                <p>Country : Not announced yet</p>
-            }
+            <p>End on : @item.EndDate.ToString("D")</p> 
+            <p>Country : @item.Address_City</p>
+                
             <a class="btn btn-info" asp-action="Detail" asp-route-id=@item.Id>Details</a>
             <a class="btn btn-warning" asp-action="Update" asp-route-id=@item.Id>Update</a>
             <a class="btn btn-danger" asp-action="Delete" asp-route-id=@item.Id>Delete</a>

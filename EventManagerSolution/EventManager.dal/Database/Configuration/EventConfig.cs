@@ -26,6 +26,21 @@ public class EventConfig : IEntityTypeConfiguration<Event>
 
         builder.Property(e => e.State)
                .IsRequired();
+        
+        builder.Property(u => u.Address_Street)
+            .IsRequired();
+        
+        builder.Property(u => u.Address_Number)
+            .IsRequired();
+        
+        builder.Property(u => u.Address_Zip)
+            .IsRequired();
+        
+        builder.Property(u => u.Address_City)
+            .IsRequired();
+        
+        builder.Property(u => u.Address_Country)
+            .IsRequired();
 
         // constraints 
        builder.HasKey(e => e.Id)
@@ -41,7 +56,7 @@ public class EventConfig : IEntityTypeConfiguration<Event>
        
        
        // data
-       builder.HasData(new List<Event>
+      /* builder.HasData(new List<Event>
        {
            new Event
            {
@@ -123,7 +138,7 @@ public class EventConfig : IEntityTypeConfiguration<Event>
                EndDate = new DateTime(2023, 8, 22, 12, 0, 0),
                State = EventStatus.Passed
            }
-       });
+       });*/
 
     }
 }

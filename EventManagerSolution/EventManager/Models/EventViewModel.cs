@@ -4,7 +4,7 @@ namespace EventManager.Models;
 
 public class EventViewModel
 {
-    public int Id { get; set; }
+    public int? Id { get; set; }
     
     public string Name { get; set; }
     
@@ -14,6 +14,14 @@ public class EventViewModel
     
     public EventStatus State { get; set; }
     
-    public Address Address { get; set; }
+    public string Address_Street { get; set; }
+    
+    public string Address_Number { get; set; }
+    
+    public string Address_Zip { get; set; }
+    
+    public string Address_City { get; set; }
+    
+    public string Address_Country { get; set; }
     
 }

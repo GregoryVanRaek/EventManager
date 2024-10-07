@@ -11,13 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<DbContext_EventManager>(
-    b => b.UseSqlServer(builder.Configuration.GetConnectionString("Home"))
+    b => b.UseSqlServer(builder.Configuration.GetConnectionString("Default"))
 );
 
 builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<IEventService, EventService>();
-builder.Services.AddScoped<IAddressRepository, AddressRepository>();
-builder.Services.AddScoped<IAddressService, AddressService>();
 
 var app = builder.Build();
 
