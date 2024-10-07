@@ -29,5 +29,25 @@ public class DaysConfig : IEntityTypeConfiguration<Days>
                .WithOne(p => p.Days)
                .HasForeignKey(p => p.DaysId);
 
+        builder.HasData(new List<Days>()
+        {
+               new Days()
+               {
+                      Id = 1,
+                      Name = "Manga Days",
+                      StartDate = new DateOnly(2020, 05, 01),
+                      EventId = 9,
+                      ThemeId = 3
+               },
+               new Days()
+               {
+                      Id = 2,
+                      Name = "Cosplay Days",
+                      StartDate = new DateOnly(2020, 05, 02),
+                      EventId = 9,
+                      ThemeId = 2
+               }
+        });
+
     }
 }

@@ -14,18 +14,12 @@
 <p>@Model.EndDate</p>
 <p>@Model.Address_City</p>
 
-@if (Model.Days.Count > 0)
-{
-    foreach (var d in Model.Days)
+@foreach (var d in Model.Days)
     {
         <p>@d.Name</p>
         <p>Day's theme : @d.Theme</p>
         <p>Date : @d.StartDate</p>
     }
-}
-else
-{
-    <p>Any day planified yet</p>
 }
 
 <div>

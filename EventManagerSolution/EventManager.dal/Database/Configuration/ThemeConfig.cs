@@ -31,5 +31,24 @@ public class ThemeConfig : IEntityTypeConfiguration<Theme>
                .WithOne(d => d.Theme)
                .HasForeignKey(d => d.ThemeId);
 
+        builder.HasData(new List<Theme>()
+        {
+            new Theme()
+            {
+                Id = 1,
+                Name = "Fantasy"
+            },
+            new Theme()
+            {
+                Id = 2,
+                Name = "Science-fiction"
+            },
+            new Theme()
+            {
+                Id = 3,
+                Name = "Medieval"
+            }
+        });
+
     }
 }

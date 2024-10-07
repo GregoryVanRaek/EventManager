@@ -1,0 +1,24 @@
+﻿@using EventManager.dal.Entities
+
+@model List<DaysViewModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Days</h2>
+<p>Event : @ViewBag.EventId</p>
+
+<a class="btn btn-info" asp-action="DayCreate" asp-route-eventId=@ViewBag.EventId>Add</a>
+
+@foreach (var d in Model)
+{
+    <p>@d.Name</p>
+    <p>@d.Theme</p>
+    <p>@d.StartDate</p>
+    
+    <a class="btn btn-warning" asp-action="DayUpdate" asp-route-id=@d>Update</a>
+    <a class="btn btn-danger" asp-action="DayDelete" asp-route-id=@d.Id>Delete</a>
+}
+

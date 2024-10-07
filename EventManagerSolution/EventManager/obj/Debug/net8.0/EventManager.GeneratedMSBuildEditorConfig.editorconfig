@@ -26,12 +26,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/AllDays.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQWxsRGF5cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/AllEvent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQWxsRXZlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/DayCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGF5Q3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/DayUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGF5VXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/Detail.cshtml]

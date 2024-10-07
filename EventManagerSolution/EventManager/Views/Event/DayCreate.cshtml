@@ -1,0 +1,28 @@
+﻿@model DaysFormModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<form method="POST">
+    <input type="text" asp-for="EventId" value="@ViewBag.EventId" />
+    
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="StartDate">Start Date</label>
+        <input asp-for="StartDate" type="date" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Theme">Theme</label>
+        <input asp-for="Theme" type="text" class="form-control">
+    </div>
+    <!-- proposer la liste des themes !-->
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

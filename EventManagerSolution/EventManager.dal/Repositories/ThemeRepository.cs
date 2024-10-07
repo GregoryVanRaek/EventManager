@@ -33,7 +33,7 @@ public class ThemeRepository(DbContext_EventManager context) : IThemeRepository
 
     public Theme Update(Theme entity)
     {
-        var entityToUpdate = _context.Theme.FirstOrDefault(x => x.Id == entity.Id);
+        var entityToUpdate = _context.Theme.FirstOrDefault(t => t.Id == entity.Id);
         
         _context.Entry(entityToUpdate).CurrentValues.SetValues(entity);
         
@@ -44,7 +44,7 @@ public class ThemeRepository(DbContext_EventManager context) : IThemeRepository
 
     public bool Delete(Theme entity)
     {
-        var toDelete = _context.Theme.FirstOrDefault(x => x.Id == entity.Id);
+        var toDelete = _context.Theme.FirstOrDefault(t => t.Id == entity.Id);
 
         if (toDelete != null)
         {

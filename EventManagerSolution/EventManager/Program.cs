@@ -17,6 +17,9 @@ builder.Services.AddDbContext<DbContext_EventManager>(
 builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<IEventService, EventService>();
 
+builder.Services.AddScoped<IDaysRepository, DaysRepository>();
+builder.Services.AddScoped<IDaysService, DaysService>();
+
 builder.Services.AddScoped<IThemeRepository, ThemeRepository>();
 builder.Services.AddScoped<IThemeService, ThemeService>();
 
