@@ -245,6 +245,22 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager\\wwwroot\\pic\\1.jpg",
+      "PackagePath": "staticwebassets\\pic\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager\\wwwroot\\pic\\2.jpg",
+      "PackagePath": "staticwebassets\\pic\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager\\wwwroot\\pic\\3.jpg",
+      "PackagePath": "staticwebassets\\pic\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager\\wwwroot\\pic\\logo.svg",
+      "PackagePath": "staticwebassets\\pic\\logo.svg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EventManager.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -3,8 +3,113 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>Page d'accueil</h1>
+<header class="bg-primary text-white text-center py-5">
+    <h1>Event Master</h1>
+    <div class="container">
+        <h2>Discover Events You Can't Miss!</h2>
+        <p>Organize, plan, and join events in your city.</p>
+        <a asp-controller="Event" asp-action="AllEvent" class="btn btn-light btn-lg">Explore Events</a>
+    </div>
+</header>
 
-<div class="text-center">
-    <p>Bienvenue</p>
-</div>
+<!-- Upcoming Events -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center">Upcoming Events</h2>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/pic/3.jpg" class="card-img-top img-fluid" alt="Festival pic">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Fake Festival</h5>
+                        <p class="card-text">Date: 20/12/2024 - 23/12/2024</p>
+                        <p class="card-text">Location: Paris</p>
+                        <a asp-controller="Event" asp-action="Detail" asp-route-id="15" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/pic/2.jpg" class="card-img-top img-fluid" alt="Gamescom pic">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Gamescom</h5>
+                        <p class="card-text">Date: 20/08/2025 - 24/08/2025</p>
+                        <p class="card-text">Location: Cologne</p>
+                        <a asp-controller="Event" asp-action="Detail" asp-route-id="14" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="~/pic/1.jpg" class="card-img-top img-fluid" alt="Job day pic">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Job Day</h5>
+                        <p class="card-text">Date: 21/11/2024 - 22/11/2024</p>
+                        <p class="card-text">Location: Liege</p>
+                        <a asp-controller="Event" asp-action="Detail" asp-route-id="13" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Search Bar -->
+<section class="bg-light py-5">
+    <div class="container text-center">
+        <h2>Find Your Next Event</h2>
+        <form class="d-flex justify-content-center mt-3">
+            <input class="form-control me-2" type="search" placeholder="Search events..." aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center">What People Are Saying</h2>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                
+                <!-- Ajouter tous les commentaires en carrousel quand le module sera set up -->
+
+                <blockquote class="blockquote">
+                    <p class="mb-4">"I had an amazing time at the event, it was so well organized!"</p>
+                    <footer class="blockquote-footer">John Doe</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-6">
+                <blockquote class="blockquote">
+                    <p class="mb-4">"An unforgettable experience, can't wait for the next one!"</p>
+                    <footer class="blockquote-footer">Jane Smith</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action for Organizers -->
+<section class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h2>Organize Your Own Event</h2>
+        <p>Host and promote your events easily with our platform.</p>
+        <a asp-controller="Event" asp-action="Create" class="btn btn-light btn-lg">Host an Event</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy; 2024 Event Master</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a class="text-white">About</a></li>
+            <li class="list-inline-item"><a class="text-white">Contact</a></li>
+            <li class="list-inline-item"><a class="text-white">Privacy Policy</a></li>
+        </ul>
+    </div>
+</footer>

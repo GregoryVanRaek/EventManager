@@ -1,27 +1,41 @@
 ﻿@model IEnumerable<EventManager.Models.EventViewModel>
 
 <!DOCTYPE html>
-
 <html>
 <head>
-    <title>Event list</title>
+    <title>Event List</title>
 </head>
 <body>
-<h1>Here is all the futur event</h1>
-<a class="btn btn-primary" asp-area="" asp-controller="Event" asp-action="Create">+</a>
+<div class="container my-5">
+    <h1 class="text-center mb-4">Here are all the upcoming events</h1>
+    <div class="text-end mb-4">
+        <a class="btn btn-primary" asp-controller="Event" asp-action="Create">Add New Event</a>
+    </div>
 
-    <div>
-        @foreach (var item in Model)
+    <div class="row">
+        @{
+        int cpt = 1; // cpt pour les images
+        foreach (var item in Model)
         {
-            <h2>@item.Name</h2>
-            <p>Start on : @item.StartDate.ToString("D")</p>
-            <p>End on : @item.EndDate.ToString("D")</p> 
-            <p>Country : @item.Address_City</p>
-                
-            <a class="btn btn-info" asp-action="Detail" asp-route-id=@item.Id>Details</a>
-            <a class="btn btn-warning" asp-action="Update" asp-route-id=@item.Id>Update</a>
-            <a class="btn btn-danger" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
+        <div class="col-md-4 mb-4">
+            <div class="card text-center">
+                <img src="@Url.Content($"~/pic/{cpt}.jpg")" class="card-img-top img-fluid" alt="Event Image for @item.Name">
+                <div class="card-body">
+                    <h5 class="card-title mb-2">@item.Name</h5>
+                    <p class="card-text">Start Date: @item.StartDate.ToString("D")</p>
+                    <p class="card-text">End Date: @item.EndDate.ToString("D")</p>
+                    <p class="card-text">Location: @item.Address_City, @item.State</p>
+                    <a class="btn btn-primary" asp-action="Detail" asp-route-id="@item.Id">Details</a>
+                </div>
+            </div>
+        </div>
+        cpt++;
+        }
         }
     </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

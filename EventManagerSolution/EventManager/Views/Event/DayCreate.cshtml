@@ -1,28 +1,40 @@
 ﻿@model DaysFormModel
 
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Create New Day";
     Layout = "_Layout";
 }
 
-<form method="POST">
-    <input type="text" asp-for="EventId" value="@ViewBag.EventId" />
+<div class="container my-5 row justify-content-center">
+    <h2 class="text-center mb-4">Create New Day</h2>
     
-    <div class="form-group">
-        <label asp-for="Name">Name</label>
-        <input asp-for="Name" type="text" class="form-control">
-    </div>
-    <div class="form-group">
-        <label asp-for="StartDate">Start Date</label>
-        <input asp-for="StartDate" type="date" class="form-control">
-    </div>
+    <form method="POST" class="shadow-lg p-4 rounded bg-light col-6">
+        <input type="hidden" asp-for="EventId" value="@ViewBag.EventId" />
 
-    <div class="form-group">
-        <label asp-for="Theme">Theme</label>
-        <input asp-for="Theme" type="text" class="form-control">
-    </div>
-    <!-- proposer la liste des themes !-->
-    
-    
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+        <div class="form-group mb-3">
+            <label asp-for="Name" class="form-label">Day Name</label>
+            <input asp-for="Name" type="text" class="form-control" placeholder="Enter the day name" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="StartDate" class="form-label">Start Date</label>
+            <input asp-for="StartDate" type="date" class="form-control" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="ThemeId" class="form-label">Theme</label>
+            <select asp-for="ThemeId" class="form-select" required>
+                <option value="">Select a theme</option>
+                @foreach (var t in ViewBag.Theme)
+                {
+                    <option value="@t.Id">@t.Name</option>
+                }
+            </select>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a asp-controller="Event" asp-action="Detail" asp-route-id=@ViewBag.EventId class="btn btn-danger">Cancel</a>
+        </div>
+    </form>
+</div>

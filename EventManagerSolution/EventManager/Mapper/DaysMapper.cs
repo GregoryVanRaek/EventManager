@@ -40,6 +40,7 @@ public static class DaysMapper
             StartDate = model.StartDate,
             EventId = model.EventId,
             Event = model.Event,
+            ThemeId = model.ThemeId,
             Theme = model.Theme,
             Participations = model.Participations
         };

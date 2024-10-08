@@ -1,21 +1,50 @@
 ﻿@model DaysFormModel
 
 @{
-    ViewBag.Title = "title";
-    Layout = "_Layout";
+ViewBag.Title = "Update Day";
+Layout = "_Layout";
 }
 
-<h1>Update the day @Model.Name</h1>
+<div class="container my-5">
+    <h2 class="text-center mb-4">Update the Day: @Model.Name</h2>
 
-<form>
-    <div class="form-group">
-        <label asp-for="Name">Name</label>
-        <input asp-for="Name" type="text" class="form-control">
-    </div>
-    <div class="form-group">
-        <label asp-for="StartDate">Start Date</label>
-        <input asp-for="StartDate" type="date" class="form-control">
-    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Day Details</h5>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <input type="hidden" asp-for="EventId" value="@Model.EventId" />
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+                        <div class="form-group mb-3">
+                            <label asp-for="Name" class="form-label">Day Name</label>
+                            <input asp-for="Name" type="text" class="form-control" placeholder="Enter day name" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="StartDate" class="form-label">Start Date</label>
+                            <input asp-for="StartDate" type="date" class="form-control" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="ThemeId" class="form-label">Select Theme</label>
+                            <select asp-for="ThemeId" class="form-control" required>
+                                <option value=@Model.ThemeId>@Model.Theme.Name</option>
+                                @foreach (var t in ViewBag.Theme)
+                                {
+                                    <option value=@t.Id>@t.Name</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">Update Day</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

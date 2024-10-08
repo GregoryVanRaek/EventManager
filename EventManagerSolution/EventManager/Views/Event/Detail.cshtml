@@ -1,38 +1,58 @@
 ﻿@model EventViewModel
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Event Detail</title>
-</head>
-<body>
-
-<h1>@Model.Name</h1>
-<p>@Model.State</p>
-<p>@Model.StartDate</p>
-<p>@Model.EndDate</p>
-<p>@Model.Address_City</p>
-
-<h2>Event Days:</h2>
-<a class="btn btn-info" asp-action="DayCreate" asp-route-eventId=@Model.Id>Add</a>
-
-@if (Model.Days.Any())
-{
-    @foreach (var d in Model.Days)
-    {
-        <h3>Day: @d.Name</h3>
-        <p>Day's theme: @d.Theme</p>
-        <p>Date: @d.StartDate</p>
-    }
-}
-else
-{
-    <p>No days available for this event.</p>
+@{
+ViewBag.Title = "Event Detail";
 }
 
-<div>
+<div class="container my-5">
+    <!-- Event Title and Description -->
+    <header class="text-center mb-5">
+        <div class="d-flex align-items-center justify-content-center">
+            <h1 class="display-4 text-primary mb-0 me-3">Event: @Model.Name</h1> <!-- Removed bottom margin -->
+            <div>
+                <a class="btn btn-outline-primary me-2" asp-action="Update" asp-route-id="@Model.Id">Update</a>
+                <a class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@Model.Id" onclick="return confirm('Are you sure you want to delete this event?');">Delete</a>
+            </div>
+        </div>
+        <p class="lead text-muted m-4">Statut : @Model.State</p>
+        <p class="h5">From: <strong>@Model.StartDate.ToString("D")</strong> to <strong>@Model.EndDate.ToString("D")</strong></p>
+        <p class="h5">Location: @Model.Address_City, @Model.Address_Country</p>
+    </header>
 
+    <!-- Event Days Section -->
+    <section>
+        <h2 class="text-center mb-4">Event Days:</h2>
+        <div class="text-end mb-3">
+            <a class="btn btn-success" asp-action="DayCreate" asp-route-eventId="@Model.Id">Add Day</a>
+        </div>
+
+        @if (Model.Days.Any())
+        {
+        <div class="row">
+            @foreach (var d in Model.Days)
+            {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg border-primary">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">@d.Name</h3>
+                        <p class="text-center"><strong>Theme:</strong> @d.Theme?.Name</p>
+                        <p class="text-center"><strong>Date:</strong> <span class="badge bg-success">@d.StartDate</span></p>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <a class="btn btn-outline-primary" asp-action="DayUpdate" asp-route-id="@d.Id">Update</a>
+                            <a class="btn btn-outline-danger" asp-action="DayDelete" asp-route-id="@d.Id" onclick="return confirm('Are you sure you want to delete this day?');">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+        }
+        else
+        {
+        <div class="alert alert-warning mt-3" role="alert">
+            No days available for this event.
+        </div>
+        }
+    </section>
 </div>
-</body>
-</html>

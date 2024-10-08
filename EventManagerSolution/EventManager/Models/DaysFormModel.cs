@@ -14,6 +14,8 @@ public class DaysFormModel
     
     public Event? Event { get; set; }
     
+    public int? ThemeId { get; set; }
+    
     public Theme? Theme { get; set; }
     
     public List<Participation>? Participations { get; set; }

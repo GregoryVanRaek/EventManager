@@ -11,11 +11,13 @@ public class EventController : Controller
 {
     private readonly IEventService _eventService;
     private readonly IDaysService _daysService ;
+    private readonly IThemeService _themeService;
     
-    public EventController(IEventService eventService, IDaysService daysService)
+    public EventController(IEventService eventService, IDaysService daysService, IThemeService themeService)
     {
         _eventService = eventService;
         _daysService = daysService;
+        _themeService = themeService;
     }
 
     #region  Event
@@ -115,22 +117,11 @@ public IActionResult AllEvent()
     #endregion
     
     #region  Days
-    
-    public IActionResult AllDays(int id)
-    {
-        var days = _daysService.GetAll()
-            .Where(d => d.EventId == id)
-            .Select(e => e.toViewModel())
-            .ToList();
-
-        ViewBag.EventId = id;
-        
-        return View(days);
-    }
-    
     public IActionResult DayCreate(int eventId)
     {
         ViewBag.EventId = eventId;
+
+        ViewBag.Theme = _themeService.GetAll().Select(t => new { t.Id, t.Name }).ToList();
         
         return View();
     }
@@ -143,6 +134,7 @@ public IActionResult AllEvent()
             var newDay = model.toEntity();
             
             newDay.EventId = model.EventId;
+            newDay.ThemeId = model.ThemeId;
             
             _daysService.Create(newDay);
             return RedirectToAction(nameof(AllEvent));
@@ -171,7 +163,9 @@ public IActionResult AllEvent()
         try
         {
             var item = _daysService.GetOneById(id).toFormModel();
-        
+            
+            ViewBag.Theme = _themeService.GetAll().Select(t => new { t.Id, t.Name }).ToList();
+            
             return View(item);
         }
         catch (Exception e)

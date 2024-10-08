@@ -1,54 +1,69 @@
 ﻿@model EventFormModel
 
 @{
-    ViewBag.Title = "title";
+ViewBag.Title = "Add New Event";
 }
 
-<h2>Add a new Event</h2>
+<div class="container my-5">
+    <h2 class="text-center mb-4">Add a New Event</h2>
 
-<form method="POST">
-    <div class="form-group">
-        <label asp-for="Name">Name</label>
-        <input asp-for="Name" type="text" class="form-control">
+    <div class="row justify-content-center">
+        <div class="col-md-8"> 
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Event Details</h5>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        <div class="form-group mb-3">
+                            <label asp-for="Name" class="form-label">Event Name</label>
+                            <input asp-for="Name" type="text" class="form-control" placeholder="Enter event name" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="StartDate" class="form-label">Start Date</label>
+                            <input asp-for="StartDate" type="date" class="form-control" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="EndDate" class="form-label">End Date</label>
+                            <input asp-for="EndDate" type="date" class="form-control" required>
+                        </div>
+
+                        <h3 class="mt-4">Address</h3>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Address_Street" class="form-label">Street</label>
+                            <input asp-for="Address_Street" type="text" class="form-control" placeholder="Enter street name" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Address_Number" class="form-label">Number</label>
+                            <input asp-for="Address_Number" type="number" class="form-control" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Address_Zip" class="form-label">Zip Code</label>
+                            <input asp-for="Address_Zip" type="text" class="form-control" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Address_City" class="form-label">City</label>
+                            <input asp-for="Address_City" type="text" class="form-control" required>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="Address_Country" class="form-label">Country</label>
+                            <input asp-for="Address_Country" type="text" class="form-control" required>
+                        </div>
+
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <a asp-action="AllEvent" class="btn btn-secondary ms-2">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label asp-for="StartDate">Start date</label>
-        <input asp-for="StartDate" type="date" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label asp-for="EndDate">End date</label>
-        <input asp-for="EndDate" type="date" class="form-control">
-    </div>
-    
-    <div class="form-group">
-        <h3>Address</h3>
-        <div class="form-group">
-            <label asp-for="Address_Street">Street</label>
-            <input asp-for="Address_Street" type="text" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Address_Number">N°</label>
-            <input asp-for="Address_Number" type="number" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Address_Zip">Zip Code</label>
-            <input asp-for="Address_Zip" type="text" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Address_City">City</label>
-            <input asp-for="Address_City" type="text" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Address_Country">Country</label>
-            <input asp-for="Address_Country" type="text" class="form-control">
-        </div>
-    </div>
-    
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</div>

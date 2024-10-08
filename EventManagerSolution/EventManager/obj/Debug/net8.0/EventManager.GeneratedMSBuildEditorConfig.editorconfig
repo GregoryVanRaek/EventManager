@@ -26,10 +26,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\vanra\Documents\EventManager\EventManagerSolution\EventManager
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Event/AllDays.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQWxsRGF5cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Event/AllEvent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQWxsRXZlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

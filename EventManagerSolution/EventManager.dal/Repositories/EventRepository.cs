@@ -18,6 +18,7 @@ public class EventRepository(DbContext_EventManager context) : IEventRepository
     public Event? GetOneById(int key)
     {
         return _context.Event.Include(e => e.Days)
+                             .ThenInclude(d => d.Theme)                 
                              .FirstOrDefault(x => x.Id == key);
     }
 

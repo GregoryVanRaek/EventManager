@@ -1,63 +1,92 @@
-﻿@model EventFormModel
+﻿@using EventManager.dal.Entities
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model EventFormModel
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-    <title>Update</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Event</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
 
-<h1>Update your event</h1>
+<div class="container my-5">
+    <h1 class="text-center mb-4">Update Your Event</h1>
 
-<form method="POST">
-    <div class="form-group">
-        <label asp-for="Name">Name</label>
-        <input asp-for="Name" type="text" class="form-control">
+    <div class="card shadow">
+        <div class="card-header">
+            <h5 class="mb-0">Event Details</h5>
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                <div class="form-group mb-3">
+                    <label asp-for="Name" class="form-label">Name</label>
+                    <input asp-for="Name" type="text" class="form-control" placeholder="Enter event name" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label asp-for="StartDate" class="form-label">Start Date</label>
+                        <input asp-for="StartDate" type="date" class="form-control" required>
+                    </div>
+
+                    <div class="form-group col-md-6 mb-3">
+                        <label asp-for="EndDate" class="form-label">End Date</label>
+                        <input asp-for="EndDate" type="date" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="State" class="form-label">Status</label>
+                    <select asp-for="State" class="form-control" required>
+                        @foreach (var status in Enum.GetValues(typeof(EventStatus)))
+                        {
+                            <option value=@status>@status</option>
+                        }
+                    </select>
+                </div>
+
+                <h3 class="mt-4">Address</h3>
+                <div class="form-group mb-3">
+                    <label asp-for="Address_Street" class="form-label">Street</label>
+                    <input asp-for="Address_Street" type="text" class="form-control" placeholder="Enter street" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label asp-for="Address_Number" class="form-label">N°</label>
+                        <input asp-for="Address_Number" type="number" class="form-control" placeholder="Enter number" required>
+                    </div>
+
+                    <div class="form-group col-md-6 mb-3">
+                        <label asp-for="Address_Zip" class="form-label">Zip Code</label>
+                        <input asp-for="Address_Zip" type="text" class="form-control" placeholder="Enter zip code" required>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Address_City" class="form-label">City</label>
+                    <input asp-for="Address_City" type="text" class="form-control" placeholder="Enter city" required>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label asp-for="Address_Country" class="form-label">Country</label>
+                    <input asp-for="Address_Country" type="text" class="form-control" placeholder="Enter country" required>
+                </div>
+
+                <div class="text-end">
+                    <button type="submit" class="btn btn-primary">Update Event</button>
+                    <a class="btn btn-danger" asp-action="Detail" asp-route-id="@Model.Id">Cancel</a>
+                </div>
+            </form>
+        </div>
     </div>
+</div>
 
-    <div class="form-group">
-        <label asp-for="StartDate">Start date</label>
-        <input asp-for="StartDate" type="date" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label asp-for="EndDate">End date</label>
-        <input asp-for="EndDate" type="date" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <h3>Address</h3>
-        <div class="form-group">
-            <label asp-for="Address_Street">Street</label>
-            <input asp-for="Address_Street" type="text" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Address_Number">N°</label>
-            <input asp-for="Address_Number" type="number" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Address_Zip">Zip Code</label>
-            <input asp-for="Address_Zip" type="text" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Address_City">City</label>
-            <input asp-for="Address_City" type="text" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label asp-for="Address_Country">Country</label>
-            <input asp-for="Address_Country" type="text" class="form-control">
-        </div>
-    </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-
-<a class="btn btn-secondary" asp-action="AllDays" asp-route-id=@Model.Id>Manage your days</a>
-
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
