@@ -56,89 +56,48 @@ public class EventConfig : IEntityTypeConfiguration<Event>
        
        
        // data
-      /* builder.HasData(new List<Event>
+      builder.HasData(new List<Event>
        {
            new Event
            {
                Id = 1,
-               Name = "Conférence Tech",
-               StartDate = new DateTime(2024, 1, 15, 9, 0, 0),
-               EndDate = new DateTime(2024, 1, 15, 17, 0, 0),
-               State = EventStatus.Confirmed
+               Name = "Fake Festival",
+               StartDate = new DateTime(2024, 12, 20, 9, 0, 0),
+               EndDate = new DateTime(2024, 12, 23, 17, 0, 0),
+               State = EventStatus.Pending,
+               Address_Street = "festivallaan",
+               Address_Number = "47",
+               Address_Zip = "2500",
+               Address_City = "Amsterdam",
+               Address_Country = "Netherlands"
            },
            new Event
            {
                Id = 2,
-               Name = "Atelier de développement web",
-               StartDate = new DateTime(2024, 2, 10, 10, 0, 0),
-               EndDate = new DateTime(2024, 2, 10, 13, 0, 0),
-               State = EventStatus.Pending
+               Name = "Gamescom",
+               StartDate = new DateTime(2024, 11, 10, 9, 0, 0),
+               EndDate = new DateTime(2024, 11, 13, 17, 0, 0),
+               State = EventStatus.Pending,
+               Address_Street = "rue du jeu video",
+               Address_Number = "123",
+               Address_Zip = "95000",
+               Address_City = "Paris",
+               Address_Country = "France"
            },
            new Event
            {
                Id = 3,
-               Name = "Formation Cybersécurité",
-               StartDate = new DateTime(2024, 3, 5, 14, 0, 0),
-               EndDate = new DateTime(2024, 3, 5, 18, 0, 0),
-               State = EventStatus.Confirmed
+               Name = "Job Days",
+               StartDate = new DateTime(2024, 11, 21, 9, 0, 0),
+               EndDate = new DateTime(2024, 11, 22, 17, 0, 0),
+               State = EventStatus.Pending,
+               Address_Street = "rue du boulot",
+               Address_Number = "50",
+               Address_Zip = "4000",
+               Address_City = "Liege",
+               Address_Country = "Belgique"
            },
-           new Event
-           {
-               Id = 4,
-               Name = "Séminaire d'entreprise",
-               StartDate = new DateTime(2024, 4, 20, 8, 30, 0),
-               EndDate = new DateTime(2024, 4, 20, 12, 0, 0),
-               State = EventStatus.Pending
-           },
-           new Event
-           {
-               Id = 5,
-               Name = "Webinaire sur l'IA",
-               StartDate = new DateTime(2024, 5, 10, 16, 0, 0),
-               EndDate = new DateTime(2024, 5, 10, 17, 30, 0),
-               State = EventStatus.Confirmed
-           },
-           new Event
-           {
-               Id = 6,
-               Name = "Hackathon 2024",
-               StartDate = new DateTime(2024, 6, 18, 9, 0, 0),
-               EndDate = new DateTime(2024, 6, 19, 18, 0, 0),
-               State = EventStatus.Pending
-           },
-           new Event
-           {
-               Id = 7,
-               Name = "Meetup DevOps",
-               StartDate = new DateTime(2023, 10, 8, 14, 0, 0),
-               EndDate = new DateTime(2023, 10, 8, 18, 0, 0),
-               State = EventStatus.Passed
-           },
-           new Event
-           {
-               Id = 8,
-               Name = "Formation Docker",
-               StartDate = new DateTime(2024, 7, 2, 9, 0, 0),
-               EndDate = new DateTime(2024, 7, 2, 12, 30, 0),
-               State = EventStatus.Confirmed
-           },
-           new Event
-           {
-               Id = 9,
-               Name = "Conférence sur le cloud",
-               StartDate = new DateTime(2024, 9, 15, 11, 0, 0),
-               EndDate = new DateTime(2024, 9, 15, 15, 0, 0),
-               State = EventStatus.Pending
-           },
-           new Event
-           {
-               Id = 10,
-               Name = "Workshop sur les API REST",
-               StartDate = new DateTime(2023, 8, 22, 10, 0, 0),
-               EndDate = new DateTime(2023, 8, 22, 12, 0, 0),
-               State = EventStatus.Passed
-           }
-       });*/
+       });
 
     }
 }

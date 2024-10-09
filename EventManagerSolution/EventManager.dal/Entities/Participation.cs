@@ -9,7 +9,7 @@ public class Participation
     public int DaysId { get; set; } 
     public Days Days { get; set; }
     
-    public int UserId { get; set; }
+    public string UserId { get; set; }
     public User User { get; set; }
 }
 

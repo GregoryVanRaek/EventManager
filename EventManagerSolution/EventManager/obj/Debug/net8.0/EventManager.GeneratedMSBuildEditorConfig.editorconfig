@@ -17,71 +17,75 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EventManager
 build_property.RootNamespace = EventManager
-build_property.ProjectDir = C:\Users\vanra\Documents\EventManager\EventManagerSolution\EventManager\
+build_property.ProjectDir = C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\vanra\Documents\EventManager\EventManagerSolution\EventManager
+build_property.MSBuildProjectDirectory = C:\Users\studentdot0414\Documents\Projets\EventManager\EventManagerSolution\EventManager
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Event/AllEvent.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/AllEvent.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQWxsRXZlbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Event/Create.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Event/DayCreate.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/DayCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGF5Q3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Event/DayUpdate.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/DayUpdate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGF5VXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Event/Detail.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Event/Update.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Event/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXZlbnRcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Home/Index.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Shared/Error.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Theme/AllTheme.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Theme/AllTheme.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlbWVcQWxsVGhlbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Theme/Create.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Theme/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlbWVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Theme/Update.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Theme/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhlbWVcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/_ViewImports.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/_ViewStart.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/vanra/Documents/EventManager/EventManagerSolution/EventManager/Views/Shared/_Layout.cshtml]
+[C:/Users/studentdot0414/Documents/Projets/EventManager/EventManagerSolution/EventManager/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-hl10o799jk

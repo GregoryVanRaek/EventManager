@@ -17,10 +17,18 @@ public class UserRepository(DbContext_EventManager context) : IUserRepository
     {
         throw new NotImplementedException();
     }
+    
+    public User? GetByEmail(string email)
+    {
+        return _context.User.SingleOrDefault(u => u.Email == email);
+    }
 
     public User Create(User entity)
     {
-        throw new NotImplementedException();
+        var insert = _context.User.Add(entity).Entity;
+        _context.SaveChanges();
+        
+        return insert;
     }
 
     public User Update(User entity)

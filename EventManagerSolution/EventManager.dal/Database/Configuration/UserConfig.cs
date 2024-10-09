@@ -13,7 +13,6 @@ public class UserConfig : IEntityTypeConfiguration<User>
         
         // Column
         builder.Property(u => u.Id)
-               .ValueGeneratedOnAdd()
                .IsRequired();
         
         builder.Property(u => u.LastName)
@@ -34,20 +33,15 @@ public class UserConfig : IEntityTypeConfiguration<User>
         builder.Property(u => u.PasswordSalt)
                .IsRequired();
     
-        builder.Property(u => u.Address_Street)
-               .IsRequired();
+        builder.Property(u => u.Address_Street);
         
-        builder.Property(u => u.Address_Number)
-               .IsRequired();
+        builder.Property(u => u.Address_Number);
         
-        builder.Property(u => u.Address_Zip)
-               .IsRequired();
+        builder.Property(u => u.Address_Zip);
+
+        builder.Property(u => u.Address_City);
         
-        builder.Property(u => u.Address_City)
-               .IsRequired();
-        
-        builder.Property(u => u.Address_Country)
-               .IsRequired();
+        builder.Property(u => u.Address_Country);
         
         // Constraints
         builder.HasKey(u => u.Id)

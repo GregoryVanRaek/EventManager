@@ -3,6 +3,7 @@ using EventManager.bll.Service.Interfaces;
 using EventManager.dal.Entities;
 using EventManager.Mapper;
 using EventManager.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EventManager.Controllers;
@@ -21,7 +22,7 @@ public class EventController : Controller
     }
 
     #region  Event
-public IActionResult AllEvent()
+    public IActionResult AllEvent()
     {
         var events = _eventService.GetAll()
             .Select(e => e.toViewModel())
@@ -117,6 +118,7 @@ public IActionResult AllEvent()
     #endregion
     
     #region  Days
+    [Authorize]
     public IActionResult DayCreate(int eventId)
     {
         ViewBag.EventId = eventId;
@@ -125,7 +127,8 @@ public IActionResult AllEvent()
         
         return View();
     }
-
+    
+    [Authorize]
     [HttpPost]
     public IActionResult DayCreate([FromForm] DaysFormModel model)
     {

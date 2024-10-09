@@ -4,4 +4,5 @@ namespace EventManager.dal.Repositories.Interfaces;
 
 public interface IUserRepository : IRepository<int, User>
 {
+    public User? GetByEmail(string email);
 }
