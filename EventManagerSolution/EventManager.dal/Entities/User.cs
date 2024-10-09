@@ -6,8 +6,6 @@ public class User
     public required string LastName { get; set; }
     public required string FirstName { get; set; }
     public required string Email { get; set; }
-    public byte[] PasswordHash { get; set; } 
-    public byte[] PasswordSalt { get; set; } 
     public string? Address_Street { get; set; }
     public string? Address_Number { get; set; }
     public string? Address_Zip { get; set; }

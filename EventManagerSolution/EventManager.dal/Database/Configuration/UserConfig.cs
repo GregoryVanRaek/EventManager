@@ -26,12 +26,6 @@ public class UserConfig : IEntityTypeConfiguration<User>
         builder.Property(u => u.Email)
                .HasMaxLength(100)
                .IsRequired();
-
-        builder.Property(u => u.PasswordHash)
-               .IsRequired();
-        
-        builder.Property(u => u.PasswordSalt)
-               .IsRequired();
     
         builder.Property(u => u.Address_Street);
         

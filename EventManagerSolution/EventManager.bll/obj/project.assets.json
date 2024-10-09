@@ -4471,19 +4471,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\studentdot0414\\.nuget\\packages\\": {}
+    "C:\\Users\\vanra\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj",
+      "projectUniqueName": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj",
       "projectName": "EventManager.bll",
-      "projectPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj",
-      "packagesPath": "C:\\Users\\studentdot0414\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.bll\\obj\\",
+      "projectPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj",
+      "packagesPath": "C:\\Users\\vanra\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.bll\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\studentdot0414\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vanra\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4498,8 +4498,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj": {
-              "projectPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj"
+            "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj": {
+              "projectPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj"
             }
           }
         }

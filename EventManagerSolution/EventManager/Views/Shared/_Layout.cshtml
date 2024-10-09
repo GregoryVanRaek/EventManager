@@ -21,7 +21,12 @@
 
             <div class="col-md-3 text-end">
                 <a asp-controller="Account" asp-action="Login" type="button" class="btn btn-outline-primary me-2">Login</a>
-                <a asp-controller="Account" asp-action="Register" type="button" class="btn btn-primary">Sign-up</a>
+                <a asp-controller="Account" asp-action="Signup" type="button" class="btn btn-primary">Sign-up</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li><a>Hello </a></li>
+                    <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
+                }
             </div>
         </header>
     </div>

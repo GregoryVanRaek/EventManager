@@ -1,6 +1,5 @@
 ﻿using Auth0.AspNetCore.Authentication;
 using EventManager.bll.Service.Interfaces;
-using EventManager.Mapper;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
@@ -20,35 +19,25 @@ public class AccountController(IUserService userService) : Controller
 
         await HttpContext.ChallengeAsync(Auth0Constants.AuthenticationScheme, authenticationProperties);
     }
+    
+    public async Task Signup(string returnUrl = "/")
+    {
+        var authenticationProperties = new LoginAuthenticationPropertiesBuilder()
+            .WithParameter("screen_hint", "signup")
+            .WithRedirectUri(returnUrl)
+            .Build();
+
+        await HttpContext.ChallengeAsync(Auth0Constants.AuthenticationScheme, authenticationProperties);
+    }
 
     [Authorize]
     public async Task Logout()
     {
         var authenticationProperties = new LogoutAuthenticationPropertiesBuilder()
-            // Indicate here where Auth0 should redirect the user after a logout.
-            // Note that the resulting absolute Uri must be whitelisted in 
             .WithRedirectUri(Url.Action("Index", "Home"))
             .Build();
 
         await HttpContext.SignOutAsync(Auth0Constants.AuthenticationScheme, authenticationProperties);
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
     }
-
-    public IActionResult Register()
-    {
-        return View();
-    }
-
-    [HttpPost]
-    public IActionResult Register(UserFormModel model)
-    {
-        if (ModelState.IsValid)
-        {        
-            _userService.Create(model.toEntity(), model.Password);
-            return RedirectToAction(nameof(Login));
-        }
-        
-        return View(model);
-    }
-    
 }

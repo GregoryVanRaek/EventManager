@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager\\EventManager.csproj": {}
+    "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager\\EventManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj": {
+    "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj",
+        "projectUniqueName": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj",
         "projectName": "EventManager.bll",
-        "projectPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj",
-        "packagesPath": "C:\\Users\\studentdot0414\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.bll\\obj\\",
+        "projectPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj",
+        "packagesPath": "C:\\Users\\vanra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.bll\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\studentdot0414\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vanra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj": {
-                "projectPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj"
+              "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj": {
+                "projectPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj"
               }
             }
           }
@@ -99,17 +99,17 @@
         }
       }
     },
-    "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj": {
+    "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj",
+        "projectUniqueName": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj",
         "projectName": "EventManager.dal",
-        "projectPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj",
-        "packagesPath": "C:\\Users\\studentdot0414\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\obj\\",
+        "projectPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj",
+        "packagesPath": "C:\\Users\\vanra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\studentdot0414\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vanra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -190,17 +190,17 @@
         }
       }
     },
-    "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager\\EventManager.csproj": {
+    "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager\\EventManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager\\EventManager.csproj",
+        "projectUniqueName": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager\\EventManager.csproj",
         "projectName": "EventManager",
-        "projectPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager\\EventManager.csproj",
-        "packagesPath": "C:\\Users\\studentdot0414\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager\\obj\\",
+        "projectPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager\\EventManager.csproj",
+        "packagesPath": "C:\\Users\\vanra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\studentdot0414\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vanra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -215,11 +215,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj": {
-                "projectPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj"
+              "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj": {
+                "projectPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.bll\\EventManager.bll.csproj"
               },
-              "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj": {
-                "projectPath": "C:\\Users\\studentdot0414\\Documents\\Projets\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj"
+              "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj": {
+                "projectPath": "C:\\Users\\vanra\\Documents\\EventManager\\EventManagerSolution\\EventManager.dal\\EventManager.dal.csproj"
               }
             }
           }
