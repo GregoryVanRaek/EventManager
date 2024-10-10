@@ -15,18 +15,16 @@ public class UserConfig : IEntityTypeConfiguration<User>
         builder.Property(u => u.Id)
                .IsRequired();
         
-        builder.Property(u => u.LastName)
-               .HasMaxLength(25)
-               .IsRequired();
-        
-        builder.Property(u => u.FirstName)
-               .HasMaxLength(25)
-               .IsRequired();
-
         builder.Property(u => u.Email)
                .HasMaxLength(100)
                .IsRequired();
-    
+
+        builder.Property(u => u.LastName)
+               .HasMaxLength(25);
+
+        builder.Property(u => u.FirstName)
+               .HasMaxLength(25);
+        
         builder.Property(u => u.Address_Street);
         
         builder.Property(u => u.Address_Number);
@@ -43,9 +41,6 @@ public class UserConfig : IEntityTypeConfiguration<User>
 
         builder.HasIndex(u => u.Email) // 2 users can't have the same email
                .IsUnique();
-
-        builder.HasMany(u => u.Role)
-               .WithMany(r => r.Users);
         
         builder.HasMany(u => u.Comment)
                .WithOne(c => c.User)

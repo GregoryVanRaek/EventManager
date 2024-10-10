@@ -5,8 +5,8 @@ using EventManager.bll.Service.Interfaces;
 using EventManager.dal.Database;
 using EventManager.dal.Repositories;
 using EventManager.dal.Repositories.Interfaces;
+using EventManager.Support;
 using Microsoft.EntityFrameworkCore;
-using SampleMvcApp.Support;
 
 var builder = WebApplication.CreateBuilder(args);
 

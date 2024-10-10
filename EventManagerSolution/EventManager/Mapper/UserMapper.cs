@@ -9,6 +9,7 @@ public static class UserMapper
     {
         return new UserViewModel
         {
+            Id = entity.Id,
             LastName = entity.LastName,
             FirstName = entity.FirstName,
             Email = entity.Email,
@@ -23,6 +24,22 @@ public static class UserMapper
             LastName = entity.LastName,
             FirstName = entity.FirstName,
             Email = entity.Email,
+        };
+    }
+    
+    public static User toEntity(this UserViewModel entity)
+    {
+        return new User
+        {
+            Id = entity.Id,
+            LastName = entity.LastName,
+            FirstName = entity.FirstName,
+            Email = entity.Email,
+            Address_Street = entity.Address_Street,
+            Address_Number = entity.Address_Number,
+            Address_Zip = entity.Address_Zip,
+            Address_City = entity.Address_City,
+            Address_Country = entity.Address_Country,
         };
     }
     

@@ -13,7 +13,6 @@ public class DbContext_EventManager : DbContext
         public DbSet<Days> Days { get; set; }
         public DbSet<Event> Event { get; set; }
         public DbSet<Participation> Participation { get; set; }
-        public DbSet<Role> Role { get; set; }
         public DbSet<Theme> Theme { get; set; }
         public DbSet<User> User { get; set; }
     #endregion
@@ -24,7 +23,6 @@ public class DbContext_EventManager : DbContext
         modelBuilder.ApplyConfiguration(new DaysConfig());
         modelBuilder.ApplyConfiguration(new EventConfig());
         modelBuilder.ApplyConfiguration(new ParticipationConfig());
-        modelBuilder.ApplyConfiguration(new RoleConfig());
         modelBuilder.ApplyConfiguration(new ThemeConfig());
         modelBuilder.ApplyConfiguration(new UserConfig());
     }

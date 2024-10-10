@@ -1,0 +1,59 @@
+﻿@model UserViewModel
+
+<div class="container">
+    <h2 class="my-4">Manage Profile</h2>
+
+    <form asp-action="Profil" method="post" class="row g-3">
+        <div class="col-md-6">
+            <label asp-for="FirstName" class="form-label">First Name</label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="LastName" class="form-label">Last Name</label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Email" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control" type="email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Address_Street" class="form-label">Street Address</label>
+            <input asp-for="Address_Street" class="form-control" />
+            <span asp-validation-for="Address_Street" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-3">
+            <label asp-for="Address_Number" class="form-label">Number</label>
+            <input asp-for="Address_Number" class="form-control" />
+            <span asp-validation-for="Address_Number" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-3">
+            <label asp-for="Address_Zip" class="form-label">Zip Code</label>
+            <input asp-for="Address_Zip" class="form-control" />
+            <span asp-validation-for="Address_Zip" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Address_City" class="form-label">City</label>
+            <input asp-for="Address_City" class="form-control" />
+            <span asp-validation-for="Address_City" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Address_Country" class="form-label">Country</label>
+            <input asp-for="Address_Country" class="form-control" />
+            <span asp-validation-for="Address_Country" class="text-danger"></span>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+    </form>
+</div>

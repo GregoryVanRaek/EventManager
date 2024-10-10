@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace SampleMvcApp.Support
+﻿
+namespace EventManager.Support
 {
     public static class SameSiteServiceCollectionExtensions
     {

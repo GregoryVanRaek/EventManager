@@ -4,32 +4,60 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - EventManager</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/EventManager.styles.css" asp-append-version="true"/>
 </head>
 <body>
-    <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-            <a asp-controller="Home" asp-action="Index"><img
-                   class="logo" src="~/pic/logo.svg" alt="logo"></a>
-            <ul class="nav col-3 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a asp-controller="Home" asp-action="Index" class="nav-link px-2 link-secondary">Home</a></li>
-                <li><a asp-controller="Event" asp-action="AllEvent" class="nav-link px-2 link-dark">Events</a></li>
-                <li><a asp-controller="Theme" asp-action="AllTheme" class="nav-link px-2 link-dark">Theme</a></li>
-            </ul>
+<div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a asp-controller="Home" asp-action="Index">
+            <img class="logo" src="~/pic/logo.svg" alt="logo">
+        </a>
+        <ul class="nav col-3 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a asp-controller="Home" asp-action="Index" class="nav-link px-2 link-secondary">Home</a></li>
+            <li><a asp-controller="Event" asp-action="AllEvent" class="nav-link px-2 link-dark">Events</a></li>
+            <li><a asp-controller="Theme" asp-action="AllTheme" class="nav-link px-2 link-dark">Theme</a></li>
+        </ul>
 
-            <div class="col-md-3 text-end">
-                <a asp-controller="Account" asp-action="Login" type="button" class="btn btn-outline-primary me-2">Login</a>
-                <a asp-controller="Account" asp-action="Signup" type="button" class="btn btn-primary">Sign-up</a>
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <li><a>Hello </a></li>
-                    <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
-                }
-            </div>
-        </header>
-    </div>
+        <div class="col-md-3 text-end">
+            @if (!User.Identity.IsAuthenticated)
+            {
+            <a asp-controller="Account" asp-action="Login" type="button" class="btn btn-outline-primary me-2">Login</a>
+            <a asp-controller="Account" asp-action="Signup" type="button" class="btn btn-primary">Sign-up</a>
+            }
+            else
+            {
+                <div class="btn-group">
+                    <a asp-controller="Account" asp-action="Profile" type="button" class="btn btn-dark">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+    
+                    <button type="button" class="btn btn-outline-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="sr-only"></span>
+                    </button>
+    
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li class="dropdown-profile-text">Hello @User.Identity.Name!</li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a class="dropdown-item" asp-controller="Account" asp-action="Profil">
+                                <i class="bi bi-person-fill-gear"></i> Profil
+                            </a>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <a asp-controller="Account" asp-action="Logout" class="btn btn-outline-danger btn-logout">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            }
+        </div>
+    </header>
+</div>
     
 
 <div class="container">
