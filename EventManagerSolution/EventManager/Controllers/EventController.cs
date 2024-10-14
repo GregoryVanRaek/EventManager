@@ -3,6 +3,7 @@ using EventManager.bll.Service.Interfaces;
 using EventManager.dal.Entities;
 using EventManager.Mapper;
 using EventManager.Models;
+using EventManager.Support;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Mono.TextTemplating;
