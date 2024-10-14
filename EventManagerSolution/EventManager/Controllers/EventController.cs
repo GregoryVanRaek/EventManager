@@ -5,6 +5,7 @@ using EventManager.Mapper;
 using EventManager.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Mono.TextTemplating;
 
 namespace EventManager.Controllers;
 
@@ -13,12 +14,16 @@ public class EventController : Controller
     private readonly IEventService _eventService;
     private readonly IDaysService _daysService ;
     private readonly IThemeService _themeService;
+    private readonly IParticipationService _participationService;
+    private readonly IUserService _userService;
     
-    public EventController(IEventService eventService, IDaysService daysService, IThemeService themeService)
+    public EventController(IEventService eventService, IDaysService daysService, IThemeService themeService,IParticipationService participationService, IUserService userService)
     {
         _eventService = eventService;
         _daysService = daysService;
         _themeService = themeService;
+        _participationService = participationService;
+        _userService = userService;
     }
 
     #region  Event
@@ -200,6 +205,63 @@ public class EventController : Controller
         return View(model);
     }
 
+    #endregion
+
+    #region Participation
+    
+    [Authorize]
+    public IActionResult Participate(int id)
+    {
+        Days foundDay = _daysService.GetOneById(id);
+
+        User? foundUser = _userService.GetByEmail(User.Identity.Name);
+        
+        ParticipationFormModel model = new ParticipationFormModel()
+        {
+            DaysId = id,
+            State = ParticipationStateEnum.Pending,
+            UserId = foundUser.Id,
+        };
+        
+        return View(model);
+    }
+
+    [Authorize]
+    [HttpPost]
+    public IActionResult Participate([FromForm] ParticipationFormModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                var newParticipation = model.toEntity();
+                
+                _participationService.Create(newParticipation);
+                return RedirectToAction(nameof(AllEvent));
+            }
+            catch (Exception e)
+            {
+                return RedirectToAction(nameof(Error));
+            }
+
+        }
+
+        return View(model);
+    }
+
+    [Authorize]
+    public IActionResult MyEvents()
+    {
+        User? currentUser = _userService.GetByEmail(User.Identity.Name);
+        
+        var participations = _participationService.GetAll()
+            .Where(e => e.UserId == currentUser.Id)
+            .Select(e => e.toViewModel())
+            .ToList();
+        
+        return View(participations);
+    }
+    
     #endregion
     
     

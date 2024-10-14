@@ -59,7 +59,8 @@ public class AccountController(IUserService userService) : Controller
                 Id = Ulid.NewUlid().ToString(),
                 Email = userEmail,
                 FirstName = "",
-                LastName = ""
+                LastName = "",
+                IsAdmin = false
             };
             
             _userService.Create(newUser);
@@ -71,13 +72,13 @@ public class AccountController(IUserService userService) : Controller
     
     [Authorize]
     [HttpPost]
-    public IActionResult Profil(UserViewModel model)
+    public IActionResult Profil([FromForm] UserViewModel model)
     {
         if (ModelState.IsValid)
         {
             _userService.Update(model.toEntity());
             TempData["SuccessMessage"] = "Your profile has been updated successfully.";
-            return RedirectToAction(nameof(Profil));
+            return RedirectToAction("Index", "Home");
         }
         
         return View(model);

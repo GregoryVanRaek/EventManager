@@ -42,6 +42,11 @@ ViewBag.Title = "Event Detail";
                             <a class="btn btn-outline-primary" asp-action="DayUpdate" asp-route-id="@d.Id">Update</a>
                             <a class="btn btn-outline-danger" asp-action="DayDelete" asp-route-id="@d.Id" onclick="return confirm('Are you sure you want to delete this day?');">Delete</a>
                         </div>
+                        
+                        <div>
+                            <a class="btn btn-outline-success" asp-action="Participate" asp-route-id="@d.Id">Participate</a>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

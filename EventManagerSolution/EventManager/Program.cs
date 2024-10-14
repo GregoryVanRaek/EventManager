@@ -36,6 +36,8 @@ builder.Services.AddScoped<IDaysRepository, DaysRepository>();
 builder.Services.AddScoped<IDaysService, DaysService>();
 builder.Services.AddScoped<IThemeRepository, ThemeRepository>();
 builder.Services.AddScoped<IThemeService, ThemeService>();
+builder.Services.AddScoped<IParticipationRepository, ParticipationRepository>();
+builder.Services.AddScoped<IParticipationService, ParticipationService>();
 
 var app = builder.Build();
 

@@ -11,6 +11,7 @@ public class User
     public string? Address_Zip { get; set; }
     public string? Address_City { get; set; }
     public string? Address_Country { get; set; }
+    public bool IsAdmin { get; set; } = false;
     public List<Comment> Comment { get; set; }
     public List<Participation> Participation { get; set; }
 }

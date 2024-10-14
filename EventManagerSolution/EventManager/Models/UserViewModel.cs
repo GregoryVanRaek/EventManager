@@ -11,4 +11,5 @@ public class UserViewModel
     public string? Address_Zip { get; set; }
     public string? Address_City { get; set; }
     public string? Address_Country { get; set; }
+    public bool IsAdmin { get; set; }
 }

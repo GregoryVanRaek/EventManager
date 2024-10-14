@@ -2,7 +2,7 @@
 
 namespace EventManager.dal.Repositories.Interfaces;
 
-public interface IUserRepository : IRepository<int, User>
+public interface IUserRepository : IRepository<string, User>
 {
     public User? GetByEmail(string email);
 }

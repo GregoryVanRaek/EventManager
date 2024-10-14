@@ -13,9 +13,9 @@ public class UserRepository(DbContext_EventManager context) : IUserRepository
         return _context.User.ToList();
     }
 
-    public User? GetOneById(int id)
+    public User? GetOneById(string id)
     {
-        throw new NotImplementedException();
+        return _context.User.SingleOrDefault(u => u.Id == id);
     }
     
     public User? GetByEmail(string email)
@@ -33,11 +33,26 @@ public class UserRepository(DbContext_EventManager context) : IUserRepository
 
     public User Update(User entity)
     {
-        throw new NotImplementedException();
+        var entityToUpdate = _context.User.FirstOrDefault(d => d.Id == entity.Id);
+        
+        _context.Entry(entityToUpdate).CurrentValues.SetValues(entity);
+        
+        _context.SaveChanges();
+
+        return entityToUpdate;
     }
 
     public bool Delete(User entity)
     {
-        throw new NotImplementedException();
+        User? toDelete = _context.User.FirstOrDefault(d => d.Id == entity.Id);
+
+        if (toDelete != null)
+        {
+            _context.User.Remove(toDelete);
+            _context.SaveChanges();
+            return true;
+        }
+
+        return false;
     }
 }

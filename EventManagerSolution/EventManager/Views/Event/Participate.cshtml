@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model ParticipationFormModel
+
+@{
+    ViewBag.Title = "Participation Form";
+}
+
+<div class="container my-5 row justify-content-center">
+    <h2 class="text-center mb-4">Participation Form</h2>
+
+    <form method="POST" class="shadow-lg p-4 rounded bg-light col-6">
+
+        <input type="hidden" asp-for="DaysId" value="@Model.DaysId" />
+        <input type="hidden" asp-for="UserId" value="@Model.UserId" />
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+        
+        
+        <div class="form-group mb-3">
+            <label asp-for="OtherInformation" class="form-label">Other Information</label>
+            <textarea asp-for="OtherInformation" class="form-control" rows="3" placeholder="Enter any other relevant information"></textarea>
+        </div>
+        
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Submit</button>
+            <a asp-action="Detail" asp-route-id="@Model.DaysId" class="btn btn-danger">Cancel</a>
+        </div>
+    </form>
+</div>

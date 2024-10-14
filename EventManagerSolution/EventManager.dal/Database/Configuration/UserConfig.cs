@@ -34,6 +34,8 @@ public class UserConfig : IEntityTypeConfiguration<User>
         builder.Property(u => u.Address_City);
         
         builder.Property(u => u.Address_Country);
+
+        builder.Property(u => u.IsAdmin);
         
         // Constraints
         builder.HasKey(u => u.Id)

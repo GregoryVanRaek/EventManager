@@ -3,10 +3,12 @@
 <div class="container">
     <h2 class="my-4">Manage Profile</h2>
 
-    <form asp-action="Profil" method="post" class="row g-3">
+    <form method="POST" class="row g-3">
         <div class="col-md-6">
+            <input type="hidden" asp-for="Id" value="@Model.Id" />
+            
             <label asp-for="FirstName" class="form-label">First Name</label>
-            <input asp-for="FirstName" class="form-control" />
+            <input asp-for="FirstName" class="form-control"/>
             <span asp-validation-for="FirstName" class="text-danger"></span>
         </div>
 

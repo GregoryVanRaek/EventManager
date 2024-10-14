@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model List<ParticipationViewModel>
+
+@{
+    ViewBag.Title = "My Participations";
+}
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">My Participations</h2>
+
+    @if (Model.Any())
+    {
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Day</th>
+                <th>Status</th>
+                <th>Other Information</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var participation in Model)
+            {
+                <tr>
+                    <td>@participation.Days.Name</td>
+                    <td>@participation.State</td>
+                    <td>@(participation.OtherInformation ?? "No additional information")</td>
+                    <td>
+                        <a asp-action="Detail" asp-route-id="@participation.DaysId" class="btn btn-primary btn-sm">View Day</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p class="text-center">You have no current participations.</p>
+    }
+</div>
