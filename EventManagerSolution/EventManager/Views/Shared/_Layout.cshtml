@@ -18,8 +18,12 @@
         <ul class="nav col-3 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a asp-controller="Home" asp-action="Index" class="nav-link px-2 link-secondary">Home</a></li>
             <li><a asp-controller="Event" asp-action="AllEvent" class="nav-link px-2 link-dark">Events</a></li>
-            <li><a asp-controller="Theme" asp-action="AllTheme" class="nav-link px-2 link-dark">Theme</a></li>
-            <li><a asp-controller="Event" asp-action="MyEvents" class="nav-link px-2 link-dark">My Events</a></li>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li><a asp-controller="Theme" asp-action="AllTheme" class="nav-link px-2 link-dark">Theme</a></li>
+                <li><a asp-controller="Event" asp-action="MyEvents" class="nav-link px-2 link-dark">My Events</a></li>
+            }
+           
         </ul>
 
         <div class="col-md-3 text-end">

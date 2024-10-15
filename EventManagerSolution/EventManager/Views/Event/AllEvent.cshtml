@@ -8,10 +8,13 @@
 <body>
 <div class="container my-5">
     <h1 class="text-center mb-4">Here are all the upcoming events</h1>
-    <div class="text-end mb-4">
-        <a class="btn btn-primary" asp-controller="Event" asp-action="Create">Add New Event</a>
-    </div>
-
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="text-end mb-4">
+            <a class="btn btn-primary" asp-controller="Event" asp-action="Create">Add New Event</a>
+        </div>
+    }
+    
     <div class="row">
         @{
         int cpt = 1; // cpt pour les images
